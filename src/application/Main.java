@@ -8,6 +8,7 @@ public class Main {
 		Employee testSubject = new Employee("Lukas", "Roithmeier", 24, "SYEC", "Daumendrehn");
 
 		testSubject.printEmployee();
+		System.out.println(testSubject.toString());
 	}
 
 }

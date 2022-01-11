@@ -28,4 +28,15 @@ public class Employee extends Person {
 		System.out.println("-------------------------------------");
 	}
 
+	@Override
+	public String toString() {
+		return "Employee{" +
+				"firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", age=" + age +
+				", ID=" + ID +
+				", department='" + department + '\'' +
+				", jobDescription='" + jobDescription + '\'' +
+				'}';
+	}
 }
