@@ -35,7 +35,7 @@ public class QueueImpl extends Queue {
 		 *
 		 * Clearing all of the links between nodes is "unnecessary", but: - helps a
 		 * generational GC if the discarded nodes inhabit more than one generation - is
-		 * sur to free memory even if there is a reachable Iterator
+		 * sur to free memory even if thtere is a reachable Iterator
 		 */
 	}
 
