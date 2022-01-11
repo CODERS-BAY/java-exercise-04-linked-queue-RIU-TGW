@@ -1,11 +1,13 @@
 package application;
 
+import impl.Employee;
+
 public class Main {
 
 	public static void main(String[] args) {
-		/*
-		 * some testing here
-		 */
+		Employee testSubject = new Employee("Lukas", "Roithmeier", 24, "SYEC", "Daumendrehn");
+
+		testSubject.printEmployee();
 	}
 
 }
