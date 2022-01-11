@@ -32,7 +32,7 @@ public class QueueImpl extends Queue {
 	public void clear() {
 		/*
 		 * Comment from the Java implementation of clear() from the LinkedList
-		 * 
+		 *
 		 * Clearing all of the links between nodes is "unnecessary", but: - helps a
 		 * generational GC if the discarded nodes inhabit more than one generation - is
 		 * sure to free memory even if there is a reachable Iterator
@@ -41,20 +41,31 @@ public class QueueImpl extends Queue {
 
 	/**
 	 * Iterator mostly used for printing in this exercise.
-	 * 
+	 *
 	 * @return new Person iterator.
 	 */
 	public Iterator<Person> iterator() {
 		return new Iterator<Person>() {
 
+			Node current = first;
+
 			@Override
 			public boolean hasNext() {
-				return false;
+				return current != null;
 			}
 
 			@Override
 			public Person next() {
-				return null;
+				if (current == null) {
+					throw new NoSuchElementException();
+				}
+
+				// get the person from the node
+				Person person = current.person;
+				// get to the next node
+				current = current.next;
+
+				return person;
 			}
 
 		};

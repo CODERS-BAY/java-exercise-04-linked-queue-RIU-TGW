@@ -1,6 +1,9 @@
 package application;
 
 import impl.Employee;
+import impl.QueueImpl;
+import skeleton.Person;
+import skeleton.Queue;
 
 public class Main {
 
